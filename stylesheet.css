@@ -1,0 +1,420 @@
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+	--height: 0;
+	--plusBildHeight: 0;
+	font-family: "Century Gothic";
+}
+
+/* NAVIGATION */
+
+nav {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  height: 80px;
+  font-family: "Bahnschrift Condensed", "Trebuchet MS";
+  text-transform: uppercase;
+}
+
+nav a {
+  text-decoration: none;
+  color: hsla(185, 91%, 25%);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+nav a:hover {
+  color: hsla(185, 91%, 40%);
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: background-color 0.5s;
+}
+
+#logo img{
+	margin: 5px;
+}
+
+#logo:hover{
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* WER WIR SIND */
+
+#startbild{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  margin: 0;
+}
+
+#werWirSind{
+  height: var(--plusBildHeight);
+  justify-content: space-around;
+}
+
+#werWirSindSchullogo{
+	float: right;
+	height: 78px;
+}
+
+#plusButtonDivContainer{
+	position: absolute;
+	z-index: 0;
+	top: 35%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.4);
+	padding: 0.5em 2em;
+}
+
+#werWirSindPlus{
+    position: static;
+	background-color: hsla(185, 91%, 25%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#werWirSindPlus img{
+	padding: 0;
+	background-color: transparent;
+	width: 1.8em;
+}
+
+#werWirSindPlus p{
+  font-family: "Libre Baskerville";
+  font-size: 2.4em;
+  margin: 0.1em 0.3em 0.1em 0;
+}
+
+
+/* PROJEKTE */
+
+.themaContainer{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.plusBildContainer{
+	padding: 50px 1.5em 85px 1.5em;
+	background-color: white;
+	margin: 50px 0 50px 5%;
+	max-width: 55%;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.plusBildImg{
+	display: block;
+	max-height: 400px;
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+
+.plusButtonDiv{
+	position: absolute;
+	top: 50px;
+	background-color: rgba(255, 255, 255, 0.4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 4em;
+}
+
+.plusBildContainer span{
+	font-family: "Libre Baskerville";
+	line-height: 2em;
+	margin-top: 1em;
+	font-size: 1.6em;
+	padding: 0 0.1em 0 1em;
+	/* background-color: hsla(185, 25%, 57%, 0.41); */
+	background-color: hsl(184, 23%, 63%);;
+}
+
+.plusImg{
+	width: 1.4em;
+	margin: 0.5em;
+	animation-name: plus;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.4,0.01,0.38,1.07);
+	/*background-color: rgba(255, 255, 255, 0.4);*/
+	background-color: hsla(185, 25%, 57%, 0.41);
+	border-radius: 50%;
+	padding: 0.5em;
+}
+
+@keyframes plus{
+  0%{transform: rotate(0deg);}
+  80%{transform: rotate(270deg);}
+  100%{transform: rotate(270deg);}
+}
+
+.detailsDiv, .detailsDivAnimation{
+	font-family: "Libre Baskerville";
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background-color: white;
+	animation-duration: 1.3s;
+	animation-iteration-count: 1;
+	box-sizing: border-box;
+	border-top: white 0.5em solid;
+	border-bottom: white 0.5em solid;
+}
+
+.detailsDiv p{
+	font-size: 1em;
+	line-height: 2em;
+	text-indent: 0;
+}
+
+.detailsDiv{ 
+  z-index: 1;
+  color: black;
+  animation-name: detailsDiv;
+}
+
+@keyframes detailsDiv{
+	0%{opacity: 0;}
+	78%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+.detailsDivAnimation{
+  animation-name: detailsDivAnimation;
+  animation-timing-function: cubic-bezier(0.4,0.01,0.38,1.07);
+  padding: 0 8%;
+  overflow-y: scroll;
+}
+
+.detailsDivAnimation::-webkit-scrollbar-track {
+  background: white; 
+}
+
+@keyframes detailsDivAnimation{
+	0%{width: 0; padding: 0;}
+	78%{width: 100%; padding: 0 8%;}
+	100%{width: 100%; padding: 0 8%;}
+}
+
+.minus{
+	width: 1.4em;
+	position: absolute;
+	top: 50%;
+	right: 1.7em;
+	background-color: hsla(185, 25%, 57%, 0.41);
+	border-radius: 50%;
+	padding: 0.5em;
+}
+
+.detailsDivContent{
+	padding: 3% 13%;
+	overflow-y: scroll;
+	box-sizing: border-box;
+}
+
+.detailsDivContent img{
+	margin: 10px;
+}
+
+.detailsDivAnimation h2{
+	height: var(--height);
+}
+
+.detailsDivAnimation hr{
+	margin: 0;
+}
+
+.werWirSindDetailsDiv, .werWirSindDetailsDivAnimation{
+	width: 50%;
+	height: 50%;
+	top: 25%;
+}
+
+.werWirSindDetailsDivAnimation{
+	animation-name: werWirSindDetailsDivAnimation;
+	padding: 0 4%;
+}
+
+@keyframes werWirSindDetailsDivAnimation{
+	0%{width: 0; padding: 0;}
+	78%{width: 50%; padding: 0 4%;}
+	100%{width: 50%; padding: 0 4%;}
+}
+
+.quellenangabe{
+	font-size: 0.6em;
+	color: #A4A4A4;
+	animation-name: detailsDiv;
+	animation-duration: 1.3s;
+	animation-iteration-count: 1;
+}
+
+div.detailsDiv h2{
+	font-size: 1.2em;
+	margin: 5% 0 7% 0;
+	display: block;
+}
+
+.datumDivContainer{
+	margin-right: 7%;
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 7em;
+}
+
+.datumDiv{
+	background-color: rgba(255, 255, 255, 0.4);
+	padding: 0.15em 0.5em;
+	font-size: 1.7em;	
+	font-family: "Libre Baskerville";
+	z-index: 1;
+	width: 100%;
+}
+
+.datumDiv p{
+	/*background-color: #5c7b7c;*/
+	background-color: hsla(185, 91%, 25%);
+	padding: 0.3em 0.2em 0.2em 0.2em;
+	text-align: center;
+}
+
+.datumDivContainer hr{
+	width: 1px;
+	background-color: white;
+	border: black 0 none;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.platzhalter{
+  height: 100px;
+}
+
+#mehrAnzeigenPlus{
+	width: 2em;
+	height: 2em;
+	padding: 0.4em;
+	margin: 0;
+	border-radius: 50%;
+	background-color: hsla(185, 25%, 57%, 0.41);
+}
+
+/* SPENDEN */
+
+#spenden{
+	/*display: flex;*/
+	display: none;
+	align-items: center;
+}
+
+#spenden img{
+	display: inline-block;
+	margin: 0 5%;
+}
+
+#spenden td{
+  padding: 0.5em;
+}
+
+#spenden tr{
+  height: 3em;
+}
+
+#betrag{
+  width: 3.5em;	
+  padding: 0.2em;
+}
+
+#spenden .padding-left3em{
+  padding-left: 3em;	
+}
+
+#spenden input:hover, #spenden label:hover{
+  cursor: pointer;	
+}
+
+/* RECHENSCHAFTSBERICHTE */
+
+#rechenschaftsberichte{
+	display: none;
+}
+
+#rechenschaftsberichteDiv{
+	display: flex;
+	
+}
+
+/* IMPRESSUM */
+
+footer{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	text-align: center;
+}
+
+footer span{
+	background-color: white;
+	color: black;
+	padding-top: 0.3em;
+	font-family: "Libre Baskerville";
+}
+
+#impressumBild{
+	width: 50%;
+	box-sizing: border-box;
+	position: relative;
+	bottom: 0;
+	border-top: white 1px solid;
+	border-left: white 1px solid;
+	border-right: white 1px solid;
+}
+
+#impressumGrid{
+	box-sizing: border-box;
+	padding: 45px;
+	position: absolute;
+	display: grid;
+	grid-template-rows: 1fr 4fr;
+	grid-gap: 20px;
+	width: 50%;
+	height: 100%;
+	color: white;
+	font-size: 1.3em;
+	justify-content: space-evenly;
+}
+
+#impressumGridHeader{
+	font-size: 1.5em;
+	grid-column: 1 / 3;
+}
+
+
+
+
+
+
+
+
+
+

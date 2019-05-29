@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+
+<html lang="de">
+
+  <head>
+    <meta name="description" content="Dies ist die Website des Fördervereins der Evangelischen Schule Neuruppin.">
+    <meta name="keywords" content="Evi, Evangelische Schule Neuruppin, Evi Neuruppin, Tasca, 
+		Evangelisches Gymnasium Neuruppin, Evangelische Grundschule Neuruppin, Evangelische Oberschule Neuruppin, fördern, Förderer, Förderverein, Förderung, spenden, Spende">
+    <meta name="author" content="Luise Wöhlke, Janne Fichtner, Justus Lange, Jannis Handtke">
+    <title>EVI Förderverein</title>
+    <link href="reset.css" type="text/css" rel="stylesheet">
+    <link href="stylesheet.css" type="text/css" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="Bilder/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="width100">
+      <a href="#werWirSind" class="height100">Wer Wir Sind</a>
+      <a href="#projekte" class="height100">Projekte</a>
+	  <a href="index.html" class="height100" id="Logo">
+	    <img src="Bilder/logo.gif" class="height100" alt="Logo - lila Fisch" 
+	    title="Home"></a>
+      <a href="#spenden" class="height100">Spenden</a>
+      <a href="#rechenschaftsberichte" class="height100">Rechenschaftsberichte</a>
+    </nav>
+    <div id="content">
+
+			<div id="werWirSind" class="themaContainer">
+				<img id="startbild" src="Bilder/PlusBilder/startbild.jpg" alt="Bunte Bausteine.">
+				<div id="plusButtonDivContainer">
+					<div id="werWirSindPlus">
+						<img id="0" class="plusImg" src="Bilder/plus.png" alt="+">
+						<p>Wer Wir Sind</p>
+					</div>
+				</div>
+			</div>
+
+		<div class="platzhalter"></div>
+
+		<section id="projekte">
+	  
+		</section>
+	  <div class="platzhalter"></div>
+
+	  <div class="zentrierer"><img id="mehrAnzeigenPlus" class="plusImg" src="Bilder/plus.png" alt="+"></div>
+      <section id="spenden" class="background">
+        <img src="Bilder/lea.jpg" alt="Grundschulunterricht">
+		<form action="Daten.txt" method="POST" class="inlineblock">
+		  <table>
+		    <tr>
+			  <td></td>
+		      <td class="padding-left3em"><label for="einmalig">Einmalig</label></td>
+			  <td><input type="radio" name="haeufigkeit" id="einmalig"></td>
+			  <td></td>
+			  <td></td>
+			</tr>
+			<tr>
+			  <td><input type="number" name="betrag" value="5" id="betrag">€</td>
+		      <td class="padding-left3em"><label for="monatlich">Monatlich</label></td>
+			  <td><input type="radio" name="haeufigkeit" id="monatlich"></td>
+			  <td class="padding-left3em"><label for="bereich">Bereich</label>
+			    <select id="bereich">
+				  <option>Wo es gerade gebraucht wird</option>
+				  <option>Schüleraustausch-Programm</option>
+				  <option>Theatergruppe</option>
+				  <option>Fachbereich Fremdsprachen</option>
+				  <option>Fachbereich Religion</option>
+				  <option>Fachbereich Naturwissenschaften</option>
+				  <option>Fachbereich Sport</option>
+				  <option>Fachbereich Deutsch</option>
+			    </select></td>
+			  <td class="padding-left3em"><input type="submit" value="bestätigen"></td>
+			</tr>
+			<tr>
+			  <td></td>
+		      <td class="padding-left3em"><label for="jaehrlich">Jährlich</label></td>
+			  <td><input type="radio" name="haeufigkeit" id="jaehrlich"></td>
+			  <td></td>
+			  <td></td>
+			  <td></td>
+			</tr>
+		  </table>
+		</form>
+      </section>
+
+      <div class="platzhalter" id="rechenschaftsberichte"></div>
+
+		<section class="padding-left5">
+			<div id="rechenschaftsberichteDiv" class="background">
+				<a href="Rechenschaftsberichte/Rechenschaftsbericht_2012" download="Rechenschaftsbericht_2012">2012</a>
+				<a href="Rechenschaftsberichte/Rechenschaftsbericht_2006" download="Rechenschaftsbericht_2012">2006</a>
+				<a href="Rechenschaftsberichte/Rechenschaftsbericht_2001" download="Rechenschaftsbericht_2012">2001</a>
+			</div>
+		</section>
+    </div>
+
+
+
+    <footer>
+		<img id="impressumBild" src="Bilder/impressum.jpg">
+		<div id="impressumGrid">
+			<p id="impressumGridHeader"><span>IMPRESSUM</span></p>
+			<p><span>Vorstand des Fördervereins der<br>Evangelischen Schule Neuruppin<br>Regattastr. 9<br>16816 Neuruppin</span></p>
+			<p><span>Frau Anke Scholz<br>Feldweg 3<br>16816 Neuruppin<br>Tel. 03391/506822</span></p>
+		</div>
+    </footer>
+	
+	<script src="main.js"></script>
+  </body>
+
+</html>
